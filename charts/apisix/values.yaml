@@ -610,6 +610,13 @@ etcd:
   timeout: 30
 
   # -- if etcd.enabled is true, set more values of bitnami/etcd helm chart
+  # -- Note: etcd images have been overridden to use bitnamilegacy instead of bitnami
+  image:
+    repository: bitnamilegacy/etcd
+  volumePermissions:
+    image:
+      repository: bitnamilegacy/os-shell
+
   auth:
     rbac:
       # -- No authentication by default. Switch to enable RBAC authentication
