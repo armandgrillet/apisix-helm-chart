@@ -31,7 +31,6 @@ jobs:
               --workdir /workdir/charts/apisix \
               quay.io/helmpack/chart-testing:v3.4.0 sh -c 'helm dependency update \
                && cd ../.. \
-               && helm repo add bitnami https://charts.bitnami.com/bitnami \
                && helm repo add apisix https://charts.apiseven.com \
                && ct lint \
                   --charts charts/apisix \
@@ -64,7 +63,6 @@ jobs:
               --workdir /workdir/charts/apisix \
               quay.io/helmpack/chart-testing:v3.4.0 sh -c 'helm dependency update \
                && cd ../.. \
-               && helm repo add bitnami https://charts.bitnami.com/bitnami \
                && helm repo add apisix https://charts.apiseven.com \
                && ct install \
                   --charts charts/apisix'
